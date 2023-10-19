@@ -3,7 +3,7 @@ import Brand from "./Brand"
 import CartContainer from './CartContainer'
 import MenuButton from './MenuButton'
 import Sections from "./Sections"
-import { RoutesPages } from "../routes/routes"
+
 
 const Navbar = () =>{
     return(
@@ -16,7 +16,7 @@ const Navbar = () =>{
             <CartContainer/>
         </div>
       </nav>
-      <RoutesPages/>
+   
       </BrowserRouter>
     )
 } 
