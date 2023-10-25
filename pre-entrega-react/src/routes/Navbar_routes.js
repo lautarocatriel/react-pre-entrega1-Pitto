@@ -9,10 +9,10 @@ export const NAVBAR_ROUTES = [
     },
     {
         path: '/category/short',
-        name: 'Shorts',
+        name: 'Short',
     },
     {
-        path: '/category/camisetas',
-        name: 'Camisetas',
+        path: '/category/camiseta',
+        name: 'Camiseta',
     }
 ]

@@ -1,31 +1,30 @@
 import { Routes, Route, BrowserRouter} from 'react-router-dom'
 import './App.css'
-import ItemListContainer from './components/ItemListContainer'
-import Navbar from './components/NavBar'
-import { ProductsShortsContainer } from './components/productsCategories'
-// import ProductsCategories from './components/productsCategories'
-// import CartProvider from './context/cartContext'
-// import { ItemListItems } from './components/ItemListItems'
+import Navbar from './layouts/NavBar'
+import Index from './views/index'
+import Category from './views/category'
+import Item from './views/item'
+import Cart from './views/cart'
+import Checkout from './views/Checkout'
 
 
 function App() {
 
   return  (
   <div>
-    {/* <CartProvider>  */}
-    <Navbar/>
-    {/* <ProductsCategories/> */}
-    {/* </CartProvider>  */}
     <BrowserRouter>
+    <Navbar/>
     <Routes>
-      <Route exact path="/" element={<ItemListContainer/>}/>
-      <Route exact path="/categories" element={<ItemListContainer/>}/>
-      <Route exact path="/category/short" element={<ProductsShortsContainer/>}/>
-      <Route exact path="/category/camisetas" element={<ItemListContainer/>}/>
-      <Route exact path="/products/:name" element={<ItemListContainer/>}/>
+      <Route exact path="/" element={<Index/>}/>
+      <Route exact path="/categories" element={<Index/>}/>
+      <Route exact path="/category/:categoryName" element={<Category/>}/>
+      <Route exact path="/products/:itemId" element={<Item/>}/>
+      <Route path="/cart" element={<Cart/>} />
+      <Route path="/checkout" element={<Checkout/>} />
     </Routes>
+    {/* </Navbar> */}
     </BrowserRouter>
-  </div>
+    </div>
   )
 
 }

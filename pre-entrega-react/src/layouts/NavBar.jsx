@@ -1,13 +1,13 @@
-import { BrowserRouter } from "react-router-dom"
+
 import Brand from "./Brand"
 import CartContainer from './CartContainer'
 import MenuButton from './MenuButton'
 import Sections from "./Sections"
 
 
-const Navbar = () =>{
+const Navbar = ({childen}) =>{
     return(
-        <BrowserRouter>
+        <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
          <Brand/>
@@ -16,8 +16,9 @@ const Navbar = () =>{
             <CartContainer/>
         </div>
       </nav>
-   
-      </BrowserRouter>
+        {childen}
+      </div>
+
     )
 } 
 export default Navbar
